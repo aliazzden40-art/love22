@@ -1,0 +1,6 @@
+{
+  "name": "رَيَّان | ديوان القلب",
+  "description": "تحفة أدبية كلاسيكية مهداة إلى رَيَّان بقلم عليّ، تجسد سحر الشعر العربي والرسائل الوجدانية العتيقة في واحة من الكلمات الخالدة.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

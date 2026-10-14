@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-parchment: #F3E8D2;
+    --color-ivory: #FFF9EF;
+    --color-palm: #244C38;
+    --color-emerald-oasis: #376B51;
+    --color-gold: #B08D57;
+    --color-ink: #30271F;
+    --color-sand: #D9C19A;
+    --color-date-brown: #59402E;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    direction: rtl;
+    text-align: right;
+  }
+
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-ink);
+    font-family: 'Scheherazade New', 'Amiri', 'Noto Naskh Arabic', serif;
+    font-feature-settings: "cv01", "cv02", "kern", "liga", "calt";
+    letter-spacing: 0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom scrollbar in antique gold and palm tones */
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F3E8D2;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #B08D57;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #244C38;
+  }
+}
+
+/* Typography helper classes */
+.font-scheherazade {
+  font-family: 'Scheherazade New', 'Amiri', serif;
+}
+.font-quran {
+  font-family: 'Amiri Quran', 'Amiri', serif;
+}
+.font-amiri {
+  font-family: 'Scheherazade New', 'Amiri', serif;
+}
+.font-ruqaa {
+  font-family: 'Aref Ruqaa', cursive;
+}
+.font-naskh {
+  font-family: 'Noto Naskh Arabic', serif;
+}
+.font-kufi {
+  font-family: 'Reem Kufi', sans-serif;
+}
+
+/* Manuscript Parchment Card Background */
+.parchment-sheet {
+  background-color: #FFF9EF;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(176, 141, 87, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 100% 100%, rgba(36, 76, 56, 0.04) 0%, transparent 50%),
+    linear-gradient(180deg, rgba(243, 232, 210, 0.5) 0%, rgba(255, 249, 239, 0.95) 100%);
+  box-shadow: 
+    0 1px 1px rgba(48, 39, 31, 0.04),
+    0 4px 16px rgba(48, 39, 31, 0.06),
+    0 16px 32px rgba(89, 64, 46, 0.05);
+}
+
+/* Classical double border manuscript frame with antique gold glow */
+.manuscript-border {
+  border: 1px solid rgba(176, 141, 87, 0.4);
+  outline: 1px solid rgba(176, 141, 87, 0.18);
+  outline-offset: 4px;
+  transition: box-shadow 1s ease, border-color 1s ease;
+}
+
+/* Antique Gold Slow Glow Animation (وهج ذهبي هادئ يظهر ببطء) */
+@keyframes antique-gold-glow {
+  0%, 100% {
+    box-shadow: 
+      0 0 18px -2px rgba(176, 141, 87, 0.22),
+      0 0 38px -4px rgba(176, 141, 87, 0.12),
+      inset 0 0 16px rgba(176, 141, 87, 0.05);
+    border-color: rgba(176, 141, 87, 0.42);
+    outline-color: rgba(176, 141, 87, 0.2);
+  }
+  50% {
+    box-shadow: 
+      0 0 30px 4px rgba(176, 141, 87, 0.42),
+      0 0 65px 8px rgba(176, 141, 87, 0.22),
+      inset 0 0 26px rgba(176, 141, 87, 0.12);
+    border-color: rgba(176, 141, 87, 0.75);
+    outline-color: rgba(176, 141, 87, 0.45);
+  }
+}
+
+.manuscript-gold-glow {
+  animation: antique-gold-glow 6s ease-in-out infinite;
+}
+
+/* Slow opacity pulse for Islamic vegetal arabesque ornaments (نبض هادئ يحيي الزخارف) */
+@keyframes arabesque-pulse {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.03);
+  }
+}
+
+.arabesque-pulse {
+  animation: arabesque-pulse 5.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .manuscript-gold-glow {
+    animation: none;
+    box-shadow: 0 0 20px rgba(176, 141, 87, 0.25);
+  }
+  .arabesque-pulse {
+    animation: none;
+    opacity: 0.7;
+    transform: none;
+  }
+}
+
+/* Golden shimmer */
+.gold-shimmer {
+  background: linear-gradient(135deg, #B08D57 0%, #E3CDA4 50%, #B08D57 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Balanced text wrap */
+.text-balance {
+  text-wrap: balance;
+}
